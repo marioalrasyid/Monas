@@ -1,0 +1,246 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+header {
+    background-color: whitesmoke;
+    display: inline;
+}
+main {
+    position: relative;
+    display: flex;
+}
+
+
+
+/*Jumbotron*/
+.cont-jumbotron {
+    width: auto;
+    display: flex;
+}
+.cont-jumbotron img {
+    width: 40%;
+    height: auto;
+    margin: 30px;
+}
+.text-jumbotron  {
+    font: bold 8em Arial;
+    margin: 30px;
+}
+.subtext-jumbotron {
+    font: 4em Arial;
+    margin: 30px;
+}
+.subsub-jumbotron {
+    font-size: 1.3em;
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+
+
+/* Navigation */
+nav {
+    margin: 30px 0px 30px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #022f3b;
+}
+nav ul {
+    background-color: #022f3b;
+    
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav a {
+    color: gold;
+}
+nav li {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gold;
+    padding: 20px;
+}
+nav li a:hover {
+    color: cornflowerblue;
+}
+
+
+main {
+    justify-content: space-between;
+    
+}
+
+/*Aside*/
+aside .cont {
+    display: flex;
+}
+.profile {
+    background-image: url(assets/profile/Profile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.nama {
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px;
+}
+.cont {
+    display: flex;
+}
+
+aside {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #022f3b;
+    border-radius: 10px;
+    position: sticky;
+    top: 85px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+aside img {
+    width: 500px;
+    height: 500px;
+}
+aside h4 {
+    color: white;
+    margin: 20px;
+}
+
+/* Article */
+article {
+    position: relative;
+    height: auto;
+    background-color: whitesmoke;
+    box-shadow: .5px 1px 6px 0px #808080;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+article img {
+    width: 100%;
+    height: fit-content;
+}
+article h2 {
+    padding: 20px;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+article p {
+    padding: 20px;
+    font-size: 1.1em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*Footer*/
+footer {
+    width: 100vw;
+    height: 150px;
+    background-color: #022f3b;
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.content {
+    color: white;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 30px;
+}
+footer img {
+    position: absolute;
+    right: 20px;
+    width: fit-content;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+@keyframes slideRight {
+    0% {
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    
+    100% {
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    }
+/* media quary */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin: 20px 5px 0px 5px;
+    }
+    
+    .cont-jumbotron {
+        flex-direction: column;
+    }
+    .cont-jumbotron img {
+        width: 90vw;
+        margin: 20px;
+    }
+
+    .text-jumbotron {
+        font-size: 5em;
+    }
+    .subtext-jumbotron {
+        font-size: 2.5em;
+    }
+    .subsub-jumbotron {
+        font-size: 1.1em;
+    }
+
+    nav {
+        overflow: scroll;
+        position: relative;
+    }
+    article img {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        font-size: 1.1em;
+    }
+    .content {
+        z-index: 99;
+        position: relative;
+    }
+  }
